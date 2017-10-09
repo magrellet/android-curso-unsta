@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">holamundo</string>
+    <string name="name">Martin</string>
+    <string name="lastName">Grellet</string>
+    <string name="age">31</string>
+    <string name="occupation">development</string>
+</resources>
