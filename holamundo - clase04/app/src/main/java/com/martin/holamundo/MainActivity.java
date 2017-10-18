@@ -1,6 +1,5 @@
 package com.martin.holamundo;
 
-import android.opengl.EGLExt;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,11 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String DEFAULT_SELECT_VALUE="Seleccione...";
+    private static final String MASCULINO = "Masculino";
+    private static final String FEMENINO = "Femenino";
 
     EditText name;
     EditText lastName;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     String selectedGender;
 
     private Spinner combo;
-    private static String[] gender = new String[]{DEFAULT_SELECT_VALUE,"Masculino","Femenino"};
+    private static String[] gender = new String[]{DEFAULT_SELECT_VALUE, MASCULINO, FEMENINO};
 
 
     @Override
@@ -59,11 +59,9 @@ public class MainActivity extends AppCompatActivity {
                                        int position, long id) {
                 Object item = adapterView.getItemAtPosition(position);
 
-                if(!(item.toString().contains("Seleccione"))){
+                if(!(item.toString().contains(DEFAULT_SELECT_VALUE))){
                     selectedGender=item.toString();
                 }
-                //printGender.setText(item.toString());
-
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -80,20 +78,6 @@ public class MainActivity extends AppCompatActivity {
         printEmail.setText(email.getText());
         printPhone.setText(phone.getText());
         printGender.setText(selectedGender);
-
-        /*combo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view,
-                                       int position, long id) {
-                Object item = adapterView.getItemAtPosition(position);
-
-
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });*/
 
     }
 
