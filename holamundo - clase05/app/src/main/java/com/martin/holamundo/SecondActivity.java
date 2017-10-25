@@ -13,9 +13,14 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra("titulo") + " seleccionado";
-        TextView view = (TextView) findViewById(R.id.txtSubTitulo);
 
-        view.setText(message);
+        String titulo = intent.getStringExtra("titulo");
+        String subTitulo = intent.getStringExtra("subtitulo");
+
+        TextView viewSubTitulo  = (TextView) findViewById(R.id.txtSubTitulo);
+        TextView viewTitulo = (TextView) findViewById(R.id.txtTitulo);
+
+        viewTitulo.setText(titulo);
+        viewSubTitulo.setText(subTitulo);
     }
 }

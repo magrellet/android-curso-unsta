@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 String subtitulo = item.getSubtitulo();
 
                 intent.putExtra("titulo",titulo);
+                intent.putExtra("subtitulo",subtitulo);
                 startActivity(intent);
             }
         });
