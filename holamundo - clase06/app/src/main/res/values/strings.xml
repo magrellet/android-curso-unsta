@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">holamundo</string>
+    <string name="name">Nombre</string>
+    <string name="lastName">Apellido</string>
+    <string name="email">Email</string>
+    <string name="phone">Telefono</string>
+    <string name="ok">Send</string>
+    <string name="clear">Clear</string>
+</resources>
